@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		992894BB18A5AC400018A306 /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992894BA18A5AC400018A306 /* AllListsViewController.m */; };
 		992EB4BD185BE87500CD83F1 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992EB4BC185BE87500CD83F1 /* ItemDetailViewController.m */; };
 		9995B5301839E209005E948B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9995B52F1839E209005E948B /* Foundation.framework */; };
 		9995B5321839E209005E948B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9995B5311839E209005E948B /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		992894B918A5AC400018A306 /* AllListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllListsViewController.h; path = ../AllListsViewController.h; sourceTree = "<group>"; };
+		992894BA18A5AC400018A306 /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllListsViewController.m; path = ../AllListsViewController.m; sourceTree = "<group>"; };
 		992EB4BB185BE87500CD83F1 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
 		992EB4BC185BE87500CD83F1 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
 		9995B52C1839E209005E948B /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +131,8 @@
 		9995B5351839E209005E948B /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				992894B918A5AC400018A306 /* AllListsViewController.h */,
+				992894BA18A5AC400018A306 /* AllListsViewController.m */,
 				9995B53E1839E209005E948B /* ChecklistsAppDelegate.h */,
 				9995B53F1839E209005E948B /* ChecklistsAppDelegate.m */,
 				9995B5411839E209005E948B /* Main.storyboard */,
@@ -272,6 +277,7 @@
 			files = (
 				9995B53C1839E209005E948B /* main.m in Sources */,
 				9995B5401839E209005E948B /* ChecklistsAppDelegate.m in Sources */,
+				992894BB18A5AC400018A306 /* AllListsViewController.m in Sources */,
 				9995B5461839E209005E948B /* ChecklistViewController.m in Sources */,
 				992EB4BD185BE87500CD83F1 /* ItemDetailViewController.m in Sources */,
 				99B38AAB1842775E00CD3A0B /* ChecklistItem.m in Sources */,

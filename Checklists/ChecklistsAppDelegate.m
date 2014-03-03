@@ -7,12 +7,14 @@
 //
 
 #import "ChecklistsAppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation ChecklistsAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-        // Override point for customization after application launch.
+        [Crashlytics startWithAPIKey:@"01e2bba84f780607890228d0e23a5a868036219f"];
+    
     return YES;
 }
 							

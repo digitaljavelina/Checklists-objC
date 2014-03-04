@@ -9,8 +9,12 @@
 #import "ChecklistsAppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
 #import "AllListsViewController.h"
+#import "DataModel.h"
 
-@implementation ChecklistsAppDelegate
+@implementation ChecklistsAppDelegate {
+    
+    DataModel *_dataModel;
+}
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -20,10 +24,7 @@
 
 - (void)saveData {
     
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    AllListsViewController *controller = navigationController.viewControllers[0];
-    
-    [controller saveChecklists];
+    [_dataModel saveChecklists];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -48,6 +49,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    _dataModel = [[DataModel alloc] init];
+    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    
+    AllListsViewController *controller = navigationController.viewControllers[0];
+    
+    controller.dataModel = _dataModel;
+    
     [Crashlytics startWithAPIKey:@"01e2bba84f780607890228d0e23a5a868036219f"];
     
     return YES;

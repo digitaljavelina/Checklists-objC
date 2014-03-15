@@ -11,7 +11,6 @@
 		9928B81518A5E82C003626FF /* Checklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 9928B81418A5E82C003626FF /* Checklist.m */; };
 		992EB4BD185BE87500CD83F1 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 992EB4BC185BE87500CD83F1 /* ItemDetailViewController.m */; };
 		9940AC3718C5892100D82D93 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9940AC3618C5892100D82D93 /* DataModel.m */; };
-		9951184318C3E359005557AA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9951184218C3E359005557AA /* Crashlytics.framework */; };
 		9951184618C3E6C0005557AA /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9951184518C3E6C0005557AA /* ListDetailViewController.m */; };
 		9995B5301839E209005E948B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9995B52F1839E209005E948B /* Foundation.framework */; };
 		9995B5321839E209005E948B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9995B5311839E209005E948B /* CoreGraphics.framework */; };
@@ -51,7 +50,6 @@
 		992EB4BC185BE87500CD83F1 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
 		9940AC3518C5892100D82D93 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 		9940AC3618C5892100D82D93 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
-		9951184218C3E359005557AA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9951184418C3E6C0005557AA /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewController.h; sourceTree = "<group>"; };
 		9951184518C3E6C0005557AA /* ListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewController.m; sourceTree = "<group>"; };
 		9995B52C1839E209005E948B /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +87,6 @@
 				99C7C308185D30AF008D9275 /* SystemConfiguration.framework in Frameworks */,
 				9995B5321839E209005E948B /* CoreGraphics.framework in Frameworks */,
 				9995B5341839E209005E948B /* UIKit.framework in Frameworks */,
-				9951184318C3E359005557AA /* Crashlytics.framework in Frameworks */,
 				9995B5301839E209005E948B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +126,6 @@
 		9995B52E1839E209005E948B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9951184218C3E359005557AA /* Crashlytics.framework */,
 				99C7C309185D30C5008D9275 /* libz.dylib */,
 				99C7C307185D30AF008D9275 /* SystemConfiguration.framework */,
 				99C7C305185D30A3008D9275 /* CoreTelephony.framework */,
@@ -145,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				992894B918A5AC400018A306 /* AllListsViewController.h */,
+				992894BA18A5AC400018A306 /* AllListsViewController.m */,
 				9940AC3518C5892100D82D93 /* DataModel.h */,
 				9940AC3618C5892100D82D93 /* DataModel.m */,
-				992894BA18A5AC400018A306 /* AllListsViewController.m */,
 				9995B53E1839E209005E948B /* ChecklistsAppDelegate.h */,
 				9995B53F1839E209005E948B /* ChecklistsAppDelegate.m */,
 				9951184418C3E6C0005557AA /* ListDetailViewController.h */,
@@ -206,7 +202,6 @@
 				9995B5281839E209005E948B /* Sources */,
 				9995B5291839E209005E948B /* Frameworks */,
 				9995B52A1839E209005E948B /* Resources */,
-				9951184118C3E33B005557AA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -242,7 +237,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Checklists;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Digital Javelina, LLC";
 				TargetAttributes = {
 					9995B54C1839E20A005E948B = {
@@ -289,22 +284,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		9951184118C3E33B005557AA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 01e2bba84f780607890228d0e23a5a868036219f d7552cb5d6cc02caf9f4879024ede634c8f0f0afdf361f1d4165f6da89b94714";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9995B5281839E209005E948B /* Sources */ = {
@@ -373,7 +352,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -402,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -412,7 +390,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -435,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -478,7 +455,6 @@
 		9995B5621839E20A005E948B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Checklists.app/Checklists";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -501,7 +477,6 @@
 		9995B5631839E20A005E948B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Checklists.app/Checklists";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

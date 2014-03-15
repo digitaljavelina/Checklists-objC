@@ -7,7 +7,6 @@
 //
 
 #import "ChecklistsAppDelegate.h"
-#import <Crashlytics/Crashlytics.h>
 #import "AllListsViewController.h"
 #import "DataModel.h"
 
@@ -56,8 +55,6 @@
     AllListsViewController *controller = navigationController.viewControllers[0];
     
     controller.dataModel = _dataModel;
-    
-    [Crashlytics startWithAPIKey:@"01e2bba84f780607890228d0e23a5a868036219f"];
     
     return YES;
 }

@@ -67,7 +67,7 @@
     } else if (count == 0) {
         cell.detailTextLabel.text = @"All Done!";
     } else {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Item Remaining", count];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d Items Remaining", count];
     }
     
     cell.imageView.image = [UIImage imageNamed:checklist.iconName];

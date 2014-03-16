@@ -56,17 +56,11 @@
     
     controller.dataModel = _dataModel;
     
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIFont fontWithName:@"Avenir" size:20.0], NSFontAttributeName, nil]];
+    
     return YES;
-    
-    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:10];
-    
-    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = date;
-    localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    localNotification.alertBody = @"I am a local notification.";
-    localNotification.soundName = UILocalNotificationDefaultSoundName;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+
     
 }
 

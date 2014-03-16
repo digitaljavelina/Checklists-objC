@@ -57,6 +57,22 @@
     controller.dataModel = _dataModel;
     
     return YES;
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSinceNow:10];
+    
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = date;
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    localNotification.alertBody = @"I am a local notification.";
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    
+    NSLog(@"didReceiveLocalNotification %@", notification);
 }
 
 @end

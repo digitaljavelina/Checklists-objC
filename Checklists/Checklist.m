@@ -15,7 +15,7 @@
     
     if ((self = [super init])) {
         self.items = [[NSMutableArray alloc] initWithCapacity:20];
-        self.iconName = @"NoIcon";
+        self.iconName = @"No Icon";
     }
     
     return self;

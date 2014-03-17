@@ -136,6 +136,12 @@
             [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
         }
         
+        UITableViewCell *datePickerCell = [self.tableView cellForRowAtIndexPath:indexPathDatePicker];
+        
+        UIDatePicker *datePicker = (UIDatePicker *) [datePickerCell viewWithTag:100];
+        
+        [datePicker setDate:_dueDate animated:NO];
+        
         return cell;
         
         //5
@@ -144,5 +150,60 @@
     }
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (section == 1 && _datePickerVisible) {
+        return 3;
+    } else {
+        return [super tableView:tableView numberOfRowsInSection:section];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 1 && indexPath.row == 2) {
+        return 217.0f;
+    } else {
+        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self.textField resignFirstResponder];
+    
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        [self showDatePicker];
+    }
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        return indexPath;
+    } else {
+        return nil;
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 1 && indexPath.row == 2) {
+        
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.section];
+        
+        return [super tableView:tableView indentationLevelForRowAtIndexPath:newIndexPath];
+    } else {
+        return [super tableView:tableView indentationLevelForRowAtIndexPath:indexPath];
+    }
+}
+
+- (void)dateChanged:(UIDatePicker *)datePicker {
+    
+    _dueDate = datePicker.date;
+    [self updateDueDateLabel];
+}
 
 @end
